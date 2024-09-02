@@ -1,0 +1,25 @@
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://plus.unsplash.com/premium_photo-1720886073981-f975d3dc93f8?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8");
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+  }
+
+  &.show::before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
